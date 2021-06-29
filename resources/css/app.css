@@ -1,0 +1,12 @@
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+nav {
+    margin-top: 200px;
+}
+body {
+    background-color: aquamarine;
+}
