@@ -65,6 +65,9 @@
                                 <button class="btn btn-outline-dark">Hapus</button>
                             </form>
                         </div>
+
+                        <a href="{{ $siswa->id }}/edit" class="btn btn-outline-dark">Edit</a>                           
+
                     </div>
                     
                 </div>
