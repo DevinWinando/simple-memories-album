@@ -22,3 +22,4 @@ Route::get('/siswa', [SiswaController::class, 'index']);
 Route::get('/siswa/create', [SiswaController::class, 'create']);
 Route::get('/siswa/{siswa}', [SiswaController::class, 'show']);
 Route::post('/siswa', [SiswaController::class, 'store']);
+Route::delete('/siswa/{siswa}', [SiswaController::class, 'destroy']);

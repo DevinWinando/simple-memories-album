@@ -108,6 +108,8 @@ class SiswaController extends Controller
      */
     public function destroy(Siswa $siswa)
     {
-        //
+        Siswa::destroy($siswa->id);
+
+        return redirect('/siswa')->with('status', 'Data Berhasil Dihapus');
     }
 }

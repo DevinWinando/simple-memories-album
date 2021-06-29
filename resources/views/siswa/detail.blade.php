@@ -7,7 +7,7 @@
 @section('container')
     <div class="container">
         <div class="d-flex justify-content-center card-margin">
-            <div class="card shadow" style="width: 35rem; height: 22rem;">
+            <div class="card shadow" style="width: 35rem; height: 25rem;">
                 <div class="card-body">
                     <h5 class="text-center">{{ $siswa->nama }}</h5>
                     <h6 class="card-subtitle mb-2 text-muted text-center mb-4">
@@ -53,10 +53,25 @@
                         </p>
                     </div>
 
-                    <a href="/siswa" class="card-link" style="bottom: 0; position: absolute;">back</a>
+                    <div class="row">
+                        <div class="col d-flex justify-content-start mt-5 ">
+                            <a href="/siswa" class="btn btn-outline-dark">back</a>
+                        </div>
+                        
+                        <div class="col d-flex justify-content-end mt-5">
+                            <form action="{{ $siswa->id }}" method="post">
+                                @method('delete')
+                                @csrf
+                                <button class="btn btn-outline-dark">Hapus</button>
+                            </form>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
+            
         </div>
-        <button class="btn"></button>
+        
+        
     </div>
 @endsection
