@@ -48,6 +48,18 @@ class SiswaController extends Controller
         // $siswa->email = $request->email;
         // $siswa->alamat = $request->alamat;
         // $siswa->quotes = $request->quotes;
+        
+        $request->validate([
+            'nama' => 'required',
+            'kelas' => 'required',
+            'jurusan' => 'required',
+            'ttl' => 'required',
+            'gender' => 'required',
+            'hp' => 'required',
+            'email' => 'required',
+            'alamat' => 'required',
+            'quotes' => 'required',
+        ]);
 
         Siswa::create($request->all());
 
