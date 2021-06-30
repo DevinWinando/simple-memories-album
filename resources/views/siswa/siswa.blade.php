@@ -39,7 +39,6 @@
             Tambah Data
         </button>
     </div>
-      
 </div>
 
 @if (session('status'))
@@ -58,7 +57,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             
-            <form action="/siswa/{siswa}" method="post">
+            <form action="" method="post">
                 @csrf
                 <div class="modal-body">
                     <div class="mb-3">

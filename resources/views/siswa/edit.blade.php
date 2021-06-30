@@ -5,7 +5,7 @@
 @endsection
 
 @section('container')
-<form action="/siswa/{{ $siswa->id }}" method="post">
+<form action="{{ $siswa->id }}" method="post">
     @csrf
     @method('patch')
     <div class="mb-3">

@@ -37,8 +37,6 @@ class SiswaController extends Controller
      */
     public function store(Request $request)
     {
-        $siswa = new Siswa;
-
         // $siswa->nama = $request->nama;
         // $siswa->kelas = $request->kelas;
         // $siswa->jurusan = $request->jurusan;

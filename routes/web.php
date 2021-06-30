@@ -19,9 +19,8 @@ Route::get('/', [PagesController::class, 'home']);
 Route::get('/about', [PagesController::class, 'about']);
 
 Route::get('/siswa', [SiswaController::class, 'index']);
-Route::get('/siswa/create', [SiswaController::class, 'create']);
 Route::get('/siswa/{siswa}', [SiswaController::class, 'show']);
-Route::post('/siswa', [SiswaController::class, 'store']);
 Route::delete('/siswa/{siswa}', [SiswaController::class, 'destroy']);
 Route::get('/siswa/{siswa}/edit', [SiswaController::class, 'edit']);
 Route::patch('/siswa/{siswa}', [SiswaController::class, 'update']);
+Route::post('/siswa', [SiswaController::class, 'store']);
