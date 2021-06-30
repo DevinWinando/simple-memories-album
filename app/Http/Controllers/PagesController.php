@@ -8,9 +8,7 @@ class PagesController extends Controller
 {
     public function home()
     {
-        $nama = 'Devin Winando';
-
-        return view('index', ['nama' => $nama]);
+        return view('index');
     }
     
     public function about()

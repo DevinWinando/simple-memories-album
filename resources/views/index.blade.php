@@ -6,7 +6,7 @@
 
 @section('container')
 <div class="container text-center">
-    <h1>Halo {{ $nama }}</h1>
+    <h1>Halo, Selamat Datang</h1>
 </div>
 @endsection
     
