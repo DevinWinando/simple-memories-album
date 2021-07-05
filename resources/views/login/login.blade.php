@@ -71,8 +71,10 @@
                 <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
             </form>
             @if (session('status'))
-                <div class="alert alert-success alert-dismissible fade show position-absolute top-50 start-50 translate-middle" role="alert">
-                    {{ session('status') }}
+                <div class="alert alert-danger alert-dismissible fade show position-absolute top-50 start-50 translate-middle" role="alert">
+                    @foreach ($errors->all as $eror)
+                        <li>{{ $eror }}</li>
+                    @endforeach
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif
