@@ -18,7 +18,7 @@ use App\Http\Controllers\AuthController;
 
 
 
-Route::get('/', [AuthController::class, 'showFormLogin'])->name('login');
+Route::get('', [AuthController::class, 'showFormLogin'])->name('login');
 Route::get('/login', [AuthController::class, 'showFormLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
