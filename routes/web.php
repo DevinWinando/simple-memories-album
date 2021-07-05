@@ -19,24 +19,24 @@ use App\Http\Controllers\AuthController;
 
 
 Route::get('', [AuthController::class, 'showFormLogin'])->name('login');
-Route::get('/login', [AuthController::class, 'showFormLogin'])->name('login');
-Route::post('/login', [AuthController::class, 'login']);
-Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
-Route::post('/register', [AuthController::class, 'register']);
+Route::get('login', [AuthController::class, 'showFormLogin'])->name('login');
+Route::post('login', [AuthController::class, 'login']);
+Route::get('register', [AuthController::class, 'showRegisterForm'])->name('register');
+Route::post('register', [AuthController::class, 'register']);
 
 Route::group(['middleware' => 'auth'], function () {
     
-    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('logout', [AuthController::class, 'logout'])->name('logout');
     
-    Route::get('/home', [PagesController::class, 'home'])->name('home');
-    Route::get('/about', [PagesController::class, 'about']);
+    Route::get('home', [PagesController::class, 'home'])->name('home');
+    Route::get('about', [PagesController::class, 'about']);
 
     // Routing halaman siswa
-    Route::get('/siswa', [SiswaController::class, 'index']);
-    Route::get('/siswa/{siswa}', [SiswaController::class, 'show']);
-    Route::delete('/siswa/{siswa}', [SiswaController::class, 'destroy']);
-    Route::get('/siswa/{siswa}/edit', [SiswaController::class, 'edit']);
-    Route::patch('/siswa/{siswa}', [SiswaController::class, 'update']);
-    Route::post('/siswa', [SiswaController::class, 'store']);
+    Route::get('siswa', [SiswaController::class, 'index']);
+    Route::get('siswa/{siswa}', [SiswaController::class, 'show']);
+    Route::delete('siswa/{siswa}', [SiswaController::class, 'destroy']);
+    Route::get('siswa/{siswa}/edit', [SiswaController::class, 'edit']);
+    Route::patch('siswa/{siswa}', [SiswaController::class, 'update']);
+    Route::post('siswa', [SiswaController::class, 'store']);
     
 });

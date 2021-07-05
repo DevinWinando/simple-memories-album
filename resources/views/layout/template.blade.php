@@ -27,6 +27,7 @@
 
                     </div>
                 </div>
+                <a href="/logout" class="btn btn-danger">Logout</a>
             </div>
         </nav>
 

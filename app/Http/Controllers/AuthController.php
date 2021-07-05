@@ -93,4 +93,9 @@ class AuthController extends Controller
             return redirect('/register');
         }
     }
+
+    public function logout(){
+        Auth::logout();
+        return redirect('/');
+    }
 }
